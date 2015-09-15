@@ -212,3 +212,24 @@ Add the subdomain hubot should connect to. If you web URL looks like
 
 You may want to get comfortable with `heroku logs` and `heroku restart` if
 you're having issues.
+
+## Dcoker Deployment
+
+Clone the repository.
+
+```text
+$ git clone git clone https://github.com/yochiyochirb/charlotte.git
+```
+
+Build a Dcoker image.
+
+```text
+$ cd charlotte
+$ docker build -t yochiyochirb/charlotte ./ # sudo if it requires
+```
+
+Run a docker container from the built image.
+
+```text
+$ docker run -d -e HUBOT_IDOBATA_API_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx --name charlotte yochiyochirb/charlotte:latest
+```
